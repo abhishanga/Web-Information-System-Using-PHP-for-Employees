@@ -1,0 +1,77 @@
+Writeup File
+Homework Link:http://cs-server.usc.edu:2345/hw2/login1.php
+This website is about the management of a clothing line.I have used 5 tables employee,productcategory,product,users,specialsales.
+1.Employee
+employeeid	int(11)	-primary key		
+userid	int(11)		-foreign key in users table	
+firstname	varchar(255)-first name of employee	
+lastname	varchar(255)-last name of employee	
+age	int(11)		-age of employee			 
+employeepay	int(11)-employee pay
+2.Users
+userid	int(11)		-primary key	
+username	varchar(255)	-username of employee
+password	varchar(255)	-password of employee
+usertype	text            -manager,admin or sales manager
+3.Product
+productid	int(11)	-primary key	
+productcategoryid	int(11)	-foreign key in product category table		
+productname	varchar(255)	-product name
+productimage	varchar(255)-product image	
+productprice int(11)	-product price
+4.Product Category
+productcategoryid	int(11)	-primary key in product category table	
+productcategoryname	varchar(255)	-product category name
+5.Special Sales
+specialsalesid	int(11)	-primary key		
+productid	int(11)	-foreign key in product table		
+startdate	date	- start date	
+enddate	date	-end date		
+discount	int(11)	-discount
+
+Username and Passwords
+admin username:namrata password:456
+sales manager username:aardraa password:123
+manager username:abhishanga password:aardraa17
+
+Files
+prelogin.html-Contains the upper part of the login file including the heading
+postlogin.html-Contains the latter part of the page.AJAX is implemented in the terms and conditions.
+login1.php-Validates the usernames and passwords from the users database and accordingly either redirects to a particular page after a sucessful login or gives an error message.
+manager.php-Session time starts here.Contains buttons for selection of reports for product,productcategory,specialsales and employee.
+manager1.php-Contains search criteria for employee details.
+manager2.php-Contains search criteria for special sale details.
+manager3.php-Contains search criteria for product details.
+manager4.php-Contains search criteria for product category details.
+display1.php-SQL for product search is implemented.
+display2.php-SQL for employee search is implemented.
+display3.php-SQL for special sales search is implemented.
+display4.php-SQL for product category search is implemented.
+employee.php-Session time starts here.Contains buttons for adding,changing and modifying product,productcategory and specialsales details.
+addchangeproduct.php-Addition of product with price and name or modifying the existing details of product.
+addchangeproductcat.php-Addition of product category name or modifying the existing details of product category.
+addchangess.php-Addition of special sales with product discount,start date,end date or modifying the existing details of special sales product.
+addproduct.php-SQL implementation for adding product.
+addproductcat.php-SQL implementation for adding product category.
+addss.php-SQL implementation for adding special sales.
+changedeleteproduct.php-Radio list if change for product with price and name  or checkbox for delete.
+changedeleteproductcat.php-Radio list if change for product category with name  or checkbox for delete.
+changedeletess.php-Radio list if change for product with start date,end date and discount  or checkbox for delete.
+changeproduct.php-SQL implementation for changing product details.
+changeproductcat.php-SQL implementation for changing product category details.
+changess.php-SQL implementation for changing special sales details.
+deleteproduct.php-SQL implementation for deleting product details.
+deleteproductcat.php-SQL implementation for deleting product category details.
+deletess.php-SQL implementation for deleting special sales details.
+admin.php-Session time starts here.Contains buttons for adding,changing and modifying user and user login plus product,productcategory and specialsales details.Also can search for reports.
+addchangeuser.php-Addition of product with price and name or modifying the existing details of user login.
+addchangeuser1.php-Addition of product category name or modifying the existing details of user details .
+adduser.php-SQL implementation for adding user.
+adduser1.php-SQL implementation for adding user details.
+changedeleteuser.php-Radio list if change for user with username,password and usertype  or checkbox for delete.
+changedeleteuser1.php-Radio list if change for user category with first name,last name,age and employeepay  or checkbox for delete.
+changeuser.php-SQL implementation for changing user login details with username,password and usertype.
+changeuser1.php-SQL implementation for changing user details with first name,last name,age and employeepay.
+deleteuser.php-SQL implementation for deleting user login details with username,password and usertype.
+deleteuser1.php-SQL implementation for deleting user details with first name,last name,age and employeepay.
+logout.php-Timeout after 5minutes.Redirected to the login page.
